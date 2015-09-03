@@ -7,5 +7,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/* /usr/local/src/*
     
 COPY ./docker-entrypoint.sh /
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["bash"]
+
+CMD [ ]
