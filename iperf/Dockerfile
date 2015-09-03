@@ -6,7 +6,7 @@ RUN apk update && \
     apk add iperf && \
     rm -rf /var/cache/apk/*
     
-EXPOSE 5001
+EXPOSE 5001 5001/UDP
 
 ENTRYPOINT ["/usr/bin/iperf"]
 CMD ["-s"]
