@@ -6,7 +6,7 @@ RUN apk update && \
     apk add curl bash jq tar gzip ca-certificates && \
     rm -rf /var/cache/apk/* /usr/local/src/*  && \
     
-ADD docker-entrypoint.sh /
+#ADD docker-entrypoint.sh /
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+#ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["bash"]
