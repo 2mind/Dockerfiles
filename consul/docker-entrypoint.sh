@@ -17,10 +17,10 @@ fi
 
 if [ "$CI" == 1 ]; then    
     echo "Start Consul cluster $CONSUL_NODES nodes..."
-    exec consul agent -server -config-dir=/config -advertise $PI -bootstrap-expect $CONSUL_NODES -ui-dir /ui
+    exec consul agent -server -config-dir=/config -advertise $PI -bootstrap-expect $CONSUL_NODES
 else
 	echo "Join Consul cluster ..."
-	exec consul agent -server -config-dir=/config -advertise $PI -join $JC -ui-dir /ui
+	exec consul agent -server -config-dir=/config -advertise $PI -join $JC
 fi
 
 exec "$@"
