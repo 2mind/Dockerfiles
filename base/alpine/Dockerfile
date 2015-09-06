@@ -4,9 +4,5 @@ MAINTAINER SHS <shs@overstack.ru>
 RUN apk update && apk upgrade \
     apk add curl bash jq tar gzip ca-certificates lsof && \
     rm -rf /var/cache/apk/* /usr/local/src/*
-    
-COPY ./docker-entrypoint.sh /
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
-
-CMD [ ]
+CMD ["bash"]
